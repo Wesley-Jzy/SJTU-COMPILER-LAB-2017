@@ -1,0 +1,18 @@
+let
+ type any = {any : int}
+ var x := any{any = 5}
+ var buffer := getchar()
+
+ function readint(any: any) : int =
+ let var i := 0
+     function skipto() =
+      (print("ha\n");
+       while buffer="h"
+         do buffer := getchar())
+  in skipto();
+     i
+  end
+
+in
+ printi(readint(x))
+end
